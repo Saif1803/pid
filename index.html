@@ -1,1 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ol>
+      <li><h1>django-admin startproject main</h1></li>
+      <li><h1>cd main</h1></li>
+      <li><h1>python manage.py startapp app1</h1></li>
+      <li>
+        <h1>
+          in settings.py in main folder line 13: <br /><code>import os</code>
+        </h1>
+      </li>
+      <li>
+        <h1>
+          in settings.py line 57: <br />
+          <code> DIRS = [os.path.join(BASE_DIR, 'templates')], </code>
+        </h1>
+      </li>
+      <li><h1>copy and paste the urls.py from the main to app1</h1></li>
+      <li>
+        <h1>
+          in the main urls.py add the app1 urls in the urlpatterns list <br />
+          <code>path('', include('app1.urls'))</code>
+        </h1>
+      </li>
+      <li>
+        <h1>
+          in app1 urls.py add the urls for the app <br />
+          <code>
+            from app1 import views <br />
+            path('', views.home)</code
+          >
+        </h1>
+      </li>
+      <li>
+        <h1>
+          in app1 views.py add the views function <br />
+          <code>def home(request): return HttpResponse('Hello World')</code>
+        </h1>
+      </li>
 
+      <h1></h1>
+    </ol>
+  </body>
+</html>
