@@ -44,8 +44,9 @@
           <code>from django.Http import HttpResponse <br>def home(request): return HttpResponse('Hello World')</code>
         </h1>
       </li>
-
-      <h1></h1>
+      <li><h1>for HTML rendering:
+      <code>def home(request):
+    return render(request, "index.html")</code></h1></li>
     </ol>
   </body>
 </html>
