@@ -15,7 +15,6 @@ const steps = [
 ];
 
 const bookManagement = [
-  "from book_add import*",
   "def add():",
   "    n=int(input('Enter the number of books to add:'))",
   "    for i in range(0,n):",
@@ -113,7 +112,7 @@ button.addEventListener("click", function () {
 });
 
 button1.addEventListener("click", function () {
-  const fullText = bookManagement.join("\n\n");
+  const fullText = bookManagement.join("\n");
   navigator.clipboard
     .writeText(fullText)
     .then(() => {
